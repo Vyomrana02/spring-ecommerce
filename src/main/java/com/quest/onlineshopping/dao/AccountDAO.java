@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.quest.onlineshopping.entity.Account;
-
+//that any database operations performed within the marked method or class will be executed within a transaction. If the transaction is successful, the changes will be committed to the database.
 @Transactional
 @Repository
 public class AccountDAO {
