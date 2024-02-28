@@ -14,7 +14,9 @@ public class AccountDAO {
  
     @Autowired
     private SessionFactory sessionFactory;
- 
+
+   //@repository itself gives methods like findbyid,save etc but if we want to find by other than primary key we create method and return like this 
+  //ie session.find(which entity , find by which field)
     public Account findAccount(String userName) {
         Session session = this.sessionFactory.getCurrentSession();
         return session.find(Account.class, userName);
